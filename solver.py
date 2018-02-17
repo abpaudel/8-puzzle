@@ -90,7 +90,7 @@ class Board:
 		neighbors.append(self.down())
 		neighbors.append(self.left())
 		neighbors.append(self.right())
-		return list(filter(None.__ne__, neighbors))
+		return list(filter(None, neighbors))
 
 	__repr__ = __str__
 
