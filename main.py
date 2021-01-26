@@ -7,6 +7,7 @@ from astar import AStar
 from bfs import BFS
 from board import Board
 from dfs import DFS
+from iddfs import IDDFS
 
 
 def main():
@@ -14,6 +15,8 @@ def main():
     alg = sys.argv[1]
     if alg == 'bfs':
         s = BFS(p)
+    elif alg == 'ids':
+        s = IDDFS(p)
     elif alg == 'dfs':
         s = DFS(p)
     elif alg == 'ast':
@@ -23,11 +26,12 @@ def main():
         s = AStar(p)
     s.solve()
 
-    file = open(f'{alg}_output.txt', 'w')
+    file = open(f'{alg}_output1.txt', 'w')
 
     file.write('path_to_goal: ' + str(s.path) + '\n')
     file.write('cost_of_path: ' + str(len(s.path)) + '\n')
     file.write('nodes_expanded: ' + str(s.nodes_expanded) + '\n')
+    file.write('nodes_explored: ' + str(len(s.explored_nodes)) + '\n')
     file.write('search_depth: ' + str(s.solution.depth) + '\n')
     file.write('max_search_depth: ' + str(s.max_depth) + '\n')
     file.write('running_time: ' + str(resource.getrusage(resource.RUSAGE_SELF).ru_utime + \

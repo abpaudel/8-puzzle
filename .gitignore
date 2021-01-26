@@ -31,3 +31,6 @@ wheels/
 .venv
 venv/
 ENV/
+
+# outputs
+*.txt
