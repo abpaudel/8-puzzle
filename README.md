@@ -14,7 +14,7 @@ You can run `main.py` with the name of algorithm - which is `ast` for A*, `bfs`,
 $ python main.py bfs 1,2,5,3,4,0,6,7,8
 $ python main.py dfs 1,2,5,3,4,0,6,7,8
 $ python main.py ids 1,2,5,3,4,0,6,7,8
-$ python mian.py ast 1,2,5,3,4,0,6,7,8
+$ python main.py ast 1,2,5,3,4,0,6,7,8
 ```
 
 Solution and details will be saved to ```{alg-name}_output.txt```.
